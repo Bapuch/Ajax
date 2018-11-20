@@ -9,6 +9,9 @@
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
+  position: fixed;
+  top:0;
+  z-index: 5;
 }
 .navbar-main {
   color: white;

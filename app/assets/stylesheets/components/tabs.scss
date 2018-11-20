@@ -21,6 +21,7 @@
   color: rgb(10, 112, 196);
   font-size: 13px;
   font-weight: bold;
+  border-top-left-radius: 10px;
 }
 #tabs a:hover, #tabs a:hover::after, #tabs a:focus, #tabs a:focus::after {
   background: #5aaed4;
@@ -38,6 +39,7 @@
   bottom: 0;
   width: 1em;
   background: transparent;
+  border-top-right-radius: 10px;
 }
 #tabs #current a {
   background: #399ecd;
@@ -54,8 +56,14 @@
   padding: 0px;
   position: relative;
   z-index: 2;
+  display: flex;
+  justify-content: center;
   text-align: center;
+  margin:5px 50px 10px 50px;
+  box-shadow: 3px 5px 10px 2px #22779e;
+  border-radius: 30px;
 }
+#content ul{width: 100%}
 
 #content li {
   list-style-type: none;

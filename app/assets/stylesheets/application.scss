@@ -4,3 +4,9 @@
 @import "bootstrap";
 @import "font-awesome";
 @import "components/*";
+
+body{
+  background-image: asset-url('page-background');
+  background-size: cover;
+  background-color:rgba(246, 243, 227, 0.5);
+}
