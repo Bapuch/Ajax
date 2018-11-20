@@ -1,24 +1,18 @@
-# README
+## Exercice du Mardi 20 Novembre - HTML/CSS profil page
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+### Greetings
+--------------------------------------------------
+Dear machin,
 
-Things you may want to cover:
+Attaché à ce repo se trouve l'app <strong>[todomatch](https://todomatch.herokuapp.com/)</strong>
 
-* Ruby version
+### Travail réalisé par
+--------------------------------------------------
+Noms | Pseudo Slack
+------------ | -------------
+Maëlle Ngachili|@Maëlle
+Jonathan Mete|@JonathanMete
 
-* System dependencies
 
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+### Bonne correction ! :poop:
+--------------------------------------------------
