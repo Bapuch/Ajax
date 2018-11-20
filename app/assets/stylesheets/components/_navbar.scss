@@ -1,0 +1,61 @@
+/* The container <div> - needed to position the dropdown content */
+.dropdown {
+    position: relative;
+    display: inline-block;
+    float: right;
+}
+
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    right: 0;
+    background: transparent;
+    min-width: 130px;
+    height: 30px;
+    //box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+/* Links inside the dropdown */
+.dropdown-content li {
+  padding: 0px;
+  text-decoration: none;
+  display: block;
+  border-radius: 5px;
+}
+
+/* Change color of dropdown links on hover */
+.dropdown-content li:hover {
+  background-color: rgb(87, 233, 148);
+  box-shadow: 0px 8px 16px 0px rgba(3, 53, 23, 0.2);
+}
+
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {display: block;}
+
+/* Change the background color of the dropdown button when the dropdown content is shown */
+.dropdown:hover .dropbtn {
+  box-shadow: 0px 0px 16px 1px  rgb(87, 233, 148);
+}
+.dropdown-content .modal-btn {
+  width: 100%;
+  padding: 8px 16px;
+  border: none;
+  background: transparent;
+  color: rgb(38, 197, 105);
+  font-weight: bold;
+  text-shadow: 1px 1px 1px black;
+}
+.dropdown-content .modal-btn:hover {
+  color: black;
+  text-shadow: none;
+}
+.dropdown-content .modal-btn:focus {
+  outline: none;
+}
+.dropdown-content .modal-btn:active {
+  box-shadow: -1px -1px 1px white inset;
+  color: white;
+}
+

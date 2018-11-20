@@ -1,11 +1,18 @@
 <h1 class="text-center mb-4">Welcome to my todolist app</h1>
 <%= render 'layouts/task_form'  %>
-<div class="container">
-  <ul>
+
+<ul id="tabs">
+  <% i = 1 %>
   <% @categories.each do  |category|%>
-  <li><%= category.title  %></li>
-  <div class="card">
-    <ul>
+    <li><a href="#tab<%= i %>"><%= category.title  %></a></li>
+    <% i += 1%>
+  <% end %>
+</ul>
+<div id="content" style="height:154px;">
+  <ul>
+  <% i = 1 %>
+  <% @categories.each do  |category|%>
+    <div id="tab<%= i %>">
       <% category.tasks.each do |task|  %>
       <li>
         <%= task.title  %>
@@ -14,20 +21,10 @@
         <% end %>
       </li>
       <% end %>
-    </ul>
-  </div>
+    </div>
+  <% i += 1%>
   <% end %>
   </ul>
 </div>
+<%= render 'layouts/carousel' %>
 
-<div class="container">
-  <div class="row">
-    <% @tasks.each do |task|  %>
-      <div class="card col-3">
-        <% unless task.image.nil? %>
-          <%= image_tag task.image, class: "rounded-circle" %>
-        <% end %>
-      </div>
-    <% end %>
-  </div>
-</div>
