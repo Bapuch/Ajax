@@ -16,11 +16,11 @@
       <% category.tasks.each do |task|  %>
       <li id="list<%=task.id%>">
         <span class="span1">
-        <%= check_box_tag 'status', task.id, task.status, data: { remote: true, :url => url_for( :action => 'edit', controller: 'tasks', :id => task.id)}, class: 'check-box' %>
-        <%= task.title %>
-        <% unless task.deadline.nil? %>
-          , to read: <%= task.deadline.strftime('%D')  %>
-        <% end %>
+          <%= check_box_tag 'status', task.id, task.status, data: { remote: true, :url => url_for( :action => 'edit', controller: 'tasks', :id => task.id)}, class: 'check-box' %>
+          <%= task.title %>
+          <% unless task.deadline.nil? %>
+            , to read: <%= task.deadline.strftime('%D')  %>
+          <% end %>
         </span>
         <%= button_to "X", task, remote: true, method: 'delete', class: "close-btn" %>
       </li>
