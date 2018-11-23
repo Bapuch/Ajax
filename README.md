@@ -1,4 +1,4 @@
-## Exercice du Mardi 20 Novembre - jQuery ToDo List
+## Exercice du Mardi 20 & Jeudi 22 Novembre - jQuery/Ajax ToDo List
 
 ### Greetings
 --------------------------------------------------
