@@ -33,6 +33,7 @@ ActiveRecord::Schema.define(version: 2018_11_22_151554) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.string "title"
+    t.boolean "status", default: false
     t.datetime "deadline"
     t.bigint "category_id"
     t.string "image"

@@ -22,7 +22,6 @@ before_action :authenticate_user!
   end
 
   def edit
-
     @task = Task.find(params[:id])
     @categories = Category.all
     unless params.nil?
