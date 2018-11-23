@@ -1,6 +1,6 @@
 /* Add a black background color to the top navigation */
 .topnav {
-  background-color: rgba(9, 100, 122, 0.8);
+  background-image: linear-gradient(to right, #051937, #012b4a, #003d5b, #00506b, #09647a);
   //overflow: hidden;
   padding: 5px 20px;
   display: inline-block;
@@ -56,7 +56,6 @@
     border-radius: 10px;
 }
 
-
 /* When the screen is less than 600 pixels wide, hide all links, except for the first one ("Home"). Show the link that contains should open and close the topnav (.icon) */
 @media screen and (max-width: 600px) {
   .topnav .navbar-list, .dropdown .dropbtn {
@@ -92,7 +91,6 @@
     text-align: left;
   }
 }
-
 
 // AVATAR DROPDOWN ######################################################################
 

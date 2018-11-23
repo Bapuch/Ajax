@@ -1,4 +1,4 @@
-## Exercice du Mardi 20 Novembre - HTML/CSS profil page
+## Exercice du Mardi 20 Novembre - jQuery ToDo List
 
 ### Greetings
 --------------------------------------------------

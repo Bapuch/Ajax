@@ -1,0 +1,9 @@
+$(document).ready(function() {
+  let old_body = $('.m-body .mail-col').find('.m-body-content');
+  let old_object = $("#<%= @email.id %>");
+  let del_msg = $("<%= j (render 'layouts/del_email', email: @email) %>");
+  $(old_body).remove();
+  $(old_object).remove();
+
+  $(del_msg).appendTo('.m-body .mail-col').hide().slideDown();
+});

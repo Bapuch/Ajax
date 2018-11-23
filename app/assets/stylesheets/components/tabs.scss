@@ -62,9 +62,78 @@
   margin:5px 50px 10px 50px;
   box-shadow: 3px 5px 10px 2px #22779e;
   border-radius: 30px;
+  overflow-y: auto;
 }
 #content ul{width: 100%}
 
 #content li {
   list-style-type: none;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
 }
+
+#tab-list {
+  padding: 5px 5%;
+}
+.span1 {
+  color: rgb(14, 8, 110);
+  width:90%;
+}
+// barrage des taches accomplies
+.strikethrough, .strikethrough-animate {
+  position: relative;
+  display: block;
+  cursor: pointer;
+}
+
+.strikethrough:before{
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 1px;
+  top: 50%;
+  left:0;
+  right:0;
+  margin-top: -0.5px;
+  background: #000;
+}
+
+.strikethrough-before {
+  content: '';
+  position: absolute;
+  width: 0%;
+  height: 1px;
+  top: 50%;
+  left:0;
+  right:0;
+  margin-top: -0.5px;
+  background: rgb(179, 16, 16);
+}
+
+
+/* Style the close button */
+.close-btn {
+  font-weight: bold;
+  color: rgb(146, 145, 145);
+  background: transparent;
+  border: none;
+  font-size: 16px;
+  margin: 4px 1px;
+}
+
+.close-btn:hover {
+  font-weight: bold;
+  color: #f44336;
+  font-size: 20px;
+  margin: 2px 0px;
+}
+.close-btn:focus {
+  outline: none;
+  color: #f7f3f3;
+  background-color: #f44336;
+  border-radius: 50%;
+}
+
+

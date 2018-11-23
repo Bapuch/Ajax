@@ -9,16 +9,20 @@
   <% end %>
 </ul>
 <div id="content" style="height:154px;">
-  <ul>
+  <ul id="tab-list">
   <% i = 1 %>
   <% @categories.each do  |category|%>
     <div id="tab<%= i %>">
       <% category.tasks.each do |task|  %>
-      <li>
-        <%= task.title  %>
+      <li id="list<%=task.id%>">
+        <span class="span1">
+        <%= check_box_tag 'status', task.id, task.status, data: { remote: true, :url => url_for( :action => 'edit', controller: 'tasks', :id => task.id)}, class: 'check-box' %>
+        <%= task.title %>
         <% unless task.deadline.nil? %>
           , to read: <%= task.deadline.strftime('%D')  %>
         <% end %>
+        </span>
+        <%= button_to "X", task, remote: true, method: 'delete', class: "close-btn" %>
       </li>
       <% end %>
     </div>

@@ -1,0 +1,16 @@
+$(document).ready(function() {
+  let old_body = $('.m-body .mail-col').find('.m-body-content');
+  let new_body = $("<%= j (render 'layouts/email', email: @email) %>");
+  let listItem = $("#<%= @email.id %>");
+
+  if (old_body.length === 1) {
+    $(old_body).slideUp();
+    setTimeout(function(){
+      $(old_body).remove();
+    }, 300);
+  }
+
+  $(new_body).appendTo('.m-body .mail-col').hide().fadeIn(1000);
+
+  $(listItem).toggleClass('read');
+});

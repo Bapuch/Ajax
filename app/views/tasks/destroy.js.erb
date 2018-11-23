@@ -1,0 +1,6 @@
+$(document).ready(function() {
+  let listItem = $('li#list<%=@task.id%>');
+
+  listItem.find('.span1').animate({color: 'e40c0c'}, 'slow');
+  listItem.fadeOut('slow');
+});

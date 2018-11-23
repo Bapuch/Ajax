@@ -1,0 +1,5 @@
+<div class="m-body-content">
+  <p class="body-title"> <%= email.object %> </p>
+  <p class="body-body"> <%= email.body %> </p>
+  <div class='del-btn'><%= link_to "DELETE", show_path, method: 'delete', remote: true, data: {params: {id: email.id}.to_param} %></div>
+</div>

@@ -1,0 +1,13 @@
+$(document).ready(function() {
+  let listItem = $('li#list<%=@task.id%>').children('.span1');
+  let strike = $("<%= j (render 'layouts/strike') %>");
+  let span = listItem.find('.strikethrough-before');
+
+  if (listItem.find('.check-box').prop('checked')) {
+    listItem.addClass("strikethrough-animate");
+    $(strike).prependTo(listItem).animate({width: '100%'}, 'slow');
+  } else {
+    listItem.removeClass("strikethrough");
+    $(span).animate({width: '0%'}, 'slow');
+  };
+});

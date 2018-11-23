@@ -1,7 +1,13 @@
 <nav class="topnav" id="myTopnav">
-  <%= link_to "Sandbox App", root_path, class: "navbar-main" %>
+  <%= link_to "Papuch App", root_path, class: "navbar-main" %>
   <div>
     <ul class="navbar-list">
+      <li class="navbar-item">
+        <%= link_to "Email", root_path, class: "navbar-link" %>
+      </li>
+      <li class="navbar-item">
+        <%= link_to "Tasks", home_path, class: "navbar-link" %>
+      </li>
       <% unless user_signed_in? %>
       <li class="navbar-item">
         <p id="mdl-btn" class="modal-btn">Modal Log</p>
@@ -28,11 +34,9 @@
       <% unless user_signed_in? %>
       <li class="nav-item">
         <button class="modal-btn">Log in</button>
-        <!-- <%= link_to "Log in", new_user_session_path, class: "nav-link"%>-->
       </li>
       <li class="nav-item">
         <button class="modal-btn">Sign up</button>
-        <!-- <%= link_to "Sign up", new_user_registration_path, class: "nav-link" %>-->
       </li>
       <% else %>
       <li class="nav-item">

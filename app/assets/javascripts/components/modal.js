@@ -31,7 +31,6 @@ $(document).on('turbolinks:load', function () {
     }
   }
 
-
   /* Toggle between adding and removing the "responsive" class to topnav when the user clicks on the icon */
   document.getElementById('icon').onclick = function () {
     var x = document.getElementById("myTopnav");

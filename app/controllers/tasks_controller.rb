@@ -9,18 +9,30 @@ before_action :authenticate_user!
     @category = Category.find(category_params)
     @task.category = @category
     if @task.save
-      redirect_to root_path
-      flash[:notice] = "Task created"
+      respond_to do |f|
+        f.html {redirect_to home_path, notice: "Task succesfully created"}
+        f.js
+      end
     else
-      redirect_to root_path
-      flash[:notice] = "Please try again"
+      respond_to do |f|
+        f.html {redirect_to home_path, notice: "Something went wrong"}
+        f.js
+      end
     end
   end
 
   def edit
+
     @task = Task.find(params[:id])
     @categories = Category.all
-
+    unless params.nil?
+      @task.update(status: !@task.status)
+      @task.save
+      respond_to do |f|
+        f.html {redirect_to home_path}
+        f.js
+      end
+    end
   end
 
   def update
@@ -37,18 +49,21 @@ before_action :authenticate_user!
   def destroy
     @task = Task.find(params[:id])
     @task.destroy
-    redirect_to root_path
+    respond_to do |f|
+      f.html {redirect_to home_path}
+      f.js
+    end
   end
 
 
   private
 
   def task_params
-    params.permit(:title, :deadline, :description)
+    params.require(:task).permit(:title, :deadline, :description)
   end
 
   def category_params
-    params.require(:Category)
+    params.require(:task).require(:Category)
   end
 
 end

@@ -1,0 +1,21 @@
+<div class="mail-wrapper">
+  <div class="mail-container">
+    <div class="m-object">
+      <div id="mail-col-1" class="mail-col">
+        <ul class= "list-object">
+          <% @emails.each do |email|%>
+            <li id="<%= email.id %>" class="not-read"> 
+              <%= link_to email.object, show_path, remote: true, data: {params: {id: email.id}.to_param}, class: "link" %>
+            </li>
+          <% end %>
+        </ul>
+      </div>
+
+    </div>
+    <div class="m-body">
+      <div id="mail-col-2" class="mail-col">
+
+      </div>
+    </div>
+  </div>
+</div>
