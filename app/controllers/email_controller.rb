@@ -2,9 +2,11 @@ class EmailController < ApplicationController
   def index
     @emails = Email.all
     @mails = Email
-    respond_to do |f|
-      f.js
-    end
+    # respond_to do |f|
+    #   puts "there there"
+    #   f.html {redirect_to root_path}
+    #   f.js
+    # end
   end
 
   def show

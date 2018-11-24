@@ -4,7 +4,7 @@
       <div id="mail-col-1" class="mail-col">
         <ul class= "list-object">
           <% @emails.each do |email|%>
-            <li id="<%= email.id %>" class="not-read"> 
+            <li id="<%= email.id %>" class="not-read <%="read" unless email.read %>">
               <%= link_to email.object, show_path, remote: true, data: {params: {id: email.id}.to_param}, class: "link" %>
             </li>
           <% end %>
@@ -14,7 +14,6 @@
     </div>
     <div class="m-body">
       <div id="mail-col-2" class="mail-col">
-
       </div>
     </div>
   </div>
